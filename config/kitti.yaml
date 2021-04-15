@@ -39,10 +39,3 @@ max_possible_dist_to_prev_frame: 10
 
 # ------------------- Bundle Adjustment -------------------
 is_ba_fix_map_points: true
-
-
-max_num_lost: 10
-min_inliers: 30
-keyframe_rotation: 0.1
-keyframe_translation: 0.1
-map_point_erase_ratio: 0.1

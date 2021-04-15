@@ -90,8 +90,10 @@ void VisualOdometry::addFrame(Frame::Ptr frame)
                     }
 //                    printf("PnP result has been reset as R=identity, t=zero.\n");
                     printf("PnP result has been reset as previous frame. \n");
-                    printf(" -------------- Re-initializing ---------------- \n");
-                    vo_state_ = INITIALIZING;
+
+//                    // Use motion model to set pose for this unsuccessful frame and implement re-initialization
+//                    printf(" -------------- Re-initializing ---------------- \n");
+//                    vo_state_ = INITIALIZING;
                 }
                 else
                 {

@@ -16,7 +16,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20abbe67-9eaa-4b63-82b0-bdd8100ce0e0" name="Default Changelist" comment="" />
+    <list default="true" id="20abbe67-9eaa-4b63-82b0-bdd8100ce0e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cam_traj.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cam_traj.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/libmyslam_lib.so" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/libmyslam_lib.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/kitti.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/kitti.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/vo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vo_addFrame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/vo_addFrame.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +41,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ou9Ez5bT9z9E9bqKTJHwfSIlSv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -41,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../slam/slambook/ch7" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -126,7 +139,7 @@
       <workItem from="1616713058512" duration="54652000" />
       <workItem from="1617339215005" duration="35516000" />
       <workItem from="1617928465804" duration="67219000" />
-      <workItem from="1618523024563" duration="2622000" />
+      <workItem from="1618523024563" duration="6127000" />
     </task>
     <servers />
   </component>
@@ -142,30 +155,30 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1616560256906" />
-    <state width="1807" height="191" key="GridCell.Tab.0.bottom" timestamp="1618440043901">
+    <state width="1807" height="314" key="GridCell.Tab.0.bottom" timestamp="1618529313731">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="191" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1618440043901" />
-    <state width="1807" height="191" key="GridCell.Tab.0.center" timestamp="1618440043901">
+    <state width="1807" height="314" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1618529313731" />
+    <state width="1807" height="314" key="GridCell.Tab.0.center" timestamp="1618529313731">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="191" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1618440043901" />
-    <state width="1807" height="191" key="GridCell.Tab.0.left" timestamp="1618440043900">
+    <state width="1807" height="314" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1618529313731" />
+    <state width="1807" height="314" key="GridCell.Tab.0.left" timestamp="1618529313730">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="191" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1618440043900" />
-    <state width="1807" height="191" key="GridCell.Tab.0.right" timestamp="1618440043901">
+    <state width="1807" height="314" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1618529313730" />
+    <state width="1807" height="314" key="GridCell.Tab.0.right" timestamp="1618529313731">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="191" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1618440043901" />
+    <state width="1807" height="314" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1618529313731" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1614375427707">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1614375427707" />
-    <state x="640" y="291" width="866" height="590" key="find.popup" timestamp="1618380729050">
+    <state x="640" y="291" width="866" height="590" key="find.popup" timestamp="1618528544983">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="640" y="291" width="866" height="590" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1618380729050" />
+    <state x="640" y="291" width="866" height="590" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1618528544983" />
     <state x="707" y="196" width="563" height="713" key="refactoring.ChangeSignatureDialog" timestamp="1614372730289">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

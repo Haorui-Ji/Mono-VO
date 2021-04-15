@@ -101,10 +101,12 @@ void VisualOdometry::pushCurrPointsToMap_()
         int map_point_id;
 
         // If this point already triangulated in previous frames
-        // Then just find the mappoint, no need to create new.
+        // Then just find the mappoint, and update its descriptor as the descriptor in current frame's keypoint
         if (ref_->isMappoint(dm.queryIdx))
         {
             map_point_id = ref_->inliers_to_mappt_connections_[dm.queryIdx].pt_map_idx;
+            MapPoint::Ptr map_point = map_->map_points_[map_point_id];
+            map_point->descriptor_ = descriptors.row(pt_idx_curr).clone();
         }
         else // Not triangulated before. Create and push to map.
         {
