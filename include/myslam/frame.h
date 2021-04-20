@@ -53,6 +53,9 @@ public:
     // -- Current pose (This is a 4x4 matrix)
     cv::Mat T_c_w_; // transform from world to camera
 
+    // -- Velocity
+    cv::Mat velocity_;
+
 public:
     Frame() {}
 

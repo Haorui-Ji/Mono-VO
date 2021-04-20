@@ -91,9 +91,19 @@ void VisualOdometry::addFrame(Frame::Ptr frame)
 //                    printf("PnP result has been reset as R=identity, t=zero.\n");
                     printf("PnP result has been reset as previous frame. \n");
 
-//                    // Use motion model to set pose for this unsuccessful frame and implement re-initialization
-//                    printf(" -------------- Re-initializing ---------------- \n");
-//                    vo_state_ = INITIALIZING;
+                    // Use motion model to set pose for this unsuccessful frame and implement re-initialization
+                    double time_interval = curr_->time_stamp_ - prev_->time_stamp_;
+                    cv::Mat t_diff = (cv::Mat_<double>(3, 1) <<
+                            prev_->velocity_.at<double>(0, 0) * time_interval,
+                            prev_->velocity_.at<double>(1, 0) * time_interval,
+                            prev_->velocity_.at<double>(2, 0) * time_interval);
+                    cv::Mat R_prev, t_prev;
+                    getRtFromT(prev_->T_c_w_, R_prev, t_prev);
+                    cv::Mat t_curr = t_prev + t_diff;
+                    curr_->T_c_w_ = convertRt2T(R_prev, t_curr);
+
+                    printf(" -------------- Re-initializing ---------------- \n");
+                    vo_state_ = INITIALIZING;
                 }
                 else
                 {
@@ -128,10 +138,11 @@ void VisualOdometry::addFrame(Frame::Ptr frame)
                         addKeyFrame_(curr_);
                     }
                 }
-
                 break;
             }
         }
+
+        updateVelocity();
 
         // Print relative motion
         if (vo_state_ == TRACKING)

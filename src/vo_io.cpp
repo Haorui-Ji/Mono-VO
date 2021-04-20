@@ -20,14 +20,18 @@ void writePoseToFile(const string filename, vector<cv::Mat> list_T)
     }
     for (auto T : list_T)
     {
-        for (int i = 0; i < 3; i++) // order: 1st row, 2nd row, 3rd row
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                fout << T.at<double>(i, j) << " ";
-            }
-        }
-        fout << '\n';
+        fout << T.at<double>(0, 0) << " "
+            << T.at<double>(0, 1) << " "
+            << T.at<double>(0, 2) << " "
+            << T.at<double>(0, 3) << " "
+            << T.at<double>(1, 0) << " "
+            << T.at<double>(1, 1) << " "
+            << T.at<double>(1, 2) << " "
+            << T.at<double>(1, 3) << " "
+            << T.at<double>(2, 0) << " "
+            << T.at<double>(2, 1) << " "
+            << T.at<double>(2, 2) << " "
+            << T.at<double>(2, 3) << "\n";
     }
     fout.close();
 }

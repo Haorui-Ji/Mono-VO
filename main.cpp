@@ -53,12 +53,12 @@ int main(int argc, char** argv) {
         }
 
         // run vo
-        Frame::Ptr frame = Frame::createFrame(rgb_img, depth_img, camera);
+        Frame::Ptr frame = Frame::createFrame(rgb_img, depth_img, camera, kittiConfig::times[img_id]);
         vo->addFrame(frame); // This is the core of my VO !!!
 
         // Return
         // cout << "Finished an image" << endl;
-        cam_pose_history.push_back(frame->T_c_w_.clone());
+        cam_pose_history.push_back(frame->T_c_w_.clone().inv());
     }
 
     // Save camera trajectory

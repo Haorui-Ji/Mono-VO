@@ -58,6 +58,11 @@ class VisualOdometry
                 frames_buff_.pop_front();
         }
 
+        //  ------------------- Motion Model -------------------------
+        void updateVelocity();
+        // -------------------------------------------------------------
+
+
         //  ------------------- Initialization -------------------------
         void estimateMotionAnd3DPoints_();
 

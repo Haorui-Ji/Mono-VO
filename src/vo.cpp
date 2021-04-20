@@ -22,6 +22,22 @@ bool VisualOdometry::isInitialized()
     return vo_state_ == TRACKING;
 }
 
+void VisualOdometry::updateVelocity()
+{
+    if (prev_ == nullptr)
+    {
+        curr_->velocity_ = (cv::Mat_<double>(3, 1) << 0, 0, 0);
+        return;
+    }
+    cv::Mat t_diff = getPosFromT(curr_->T_c_w_) - getPosFromT(prev_->T_c_w_);
+    double time_interval = curr_->time_stamp_ - prev_->time_stamp_;
+    prev_->velocity_ = (cv::Mat_<double>(3, 1) <<
+            t_diff.at<double>(0, 0) / time_interval,
+            t_diff.at<double>(1, 0) / time_interval,
+            t_diff.at<double>(2, 0) / time_interval);
+    curr_->velocity_ = prev_->velocity_.clone();
+}
+
 // ------------------- Mapping -------------------
 
 void VisualOdometry::addKeyFrame_(Frame::Ptr keyframe)
